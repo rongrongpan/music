@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 80px;
+    background-color: rgba(0,0,0,.2);
+    .image-box{
+        position: relative;
+		width: 40%;
+		height: 0;
+		padding-bottom: 40%;
+		margin: 0 auto;
+		margin-bottom: 40px;
+        .img-wrapper{
+            position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .music-info{
+        width: 100%;
+        text-align: center;
+        .song{
+            width: 100%;
+            font-size: 26px;
+            line-height: 32px;
+            color: rgba(0,0,0,.9);
+        }
+        .album,.singer{
+            width: 100%;
+            font-size: 16px;
+            line-height: 24px;
+            color:rgba(0,0,0,.4);
+        }
+    }
+    .progress{
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 70px;
+        .curTime,.allTime{
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .pro-wrapper{
+            width: 20px;
+            flex-grow: 1;
+            height: 40px;
+            overflow: hidden;
+            .down-pro{
+                width: 100%;
+                height: 3px;
+                background-color: rgba(255, 255, 255, 0.4);
+                margin-top: 20px;
+                .up-pro{
+                    position: relative;
+                    width: 98%;
+                    height: 100%;
+                    transform: translateX(-100%);
+                    background-color: rgba(255, 0, 0, 0.4);
+                    .slider{
+                        position: absolute;
+                        width: 21px;
+                        height: 21px;
+                        top: -10px;
+                        right: -14px;
+                        &::after{
+                            position: relative;
+                            content: "";
+                            display: inline-block;
+                            text-align: center;
+                            width: 5px;
+                            height: 5px;
+                            background-color: red;
+                            border-radius: 50%;
+                            top: -2px;
+                            left: 7px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    .item-list{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        background-color: rgba(0,0,0,.3);
+        div{
+            width: 20px;
+            height: 100%;
+            flex-grow: 1;
+            background-repeat: no-repeat;
+            background-size: 40% 40%;
+            background-position: center;
+            &.like{
+                background-image: url(../images/icon-like-solid.png);
+            }
+            &.no-like{
+                background-image: url(../images/icon-like.png);
+            }
+            &.prev{
+                background-image: url(../images/icon-prev.png);
+            }
+            &.pause{
+                background-image: url(../images/icon-pause.png);
+            }
+            &.play{
+                background-image: url(../images/icon-play.png);
+            }
+            
+            &.next{
+                background-image: url(../images/icon-next.png);
+            }
+            &.list{
+                background-image: url(../images/icon-list.png);
+            }
+        }
+    }
+
+}
